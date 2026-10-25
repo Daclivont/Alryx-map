@@ -1,0 +1,1 @@
+var json_Temples_8 = {"type":"FeatureCollection","name":"Temples_8","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[]}
