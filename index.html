@@ -38,10 +38,11 @@
         <script src="data/Alryx150MileHexgrid_1.js"></script>
         <script src="data/RegionPolygons_2.js"></script>
         <script src="data/RegionLables_3.js"></script>
-        <script src="data/Country_4.js"></script>
-        <script src="data/Cities_5.js"></script>
-        <script src="data/Points_of_Interest_6.js"></script>
-        <script src="data/Temples_7.js"></script>
+        <script src="data/CountryPolygons_4.js"></script>
+        <script src="data/CountryLabels_5.js"></script>
+        <script src="data/Cities_6.js"></script>
+        <script src="data/Points_of_Interest_7.js"></script>
+        <script src="data/Temples_8.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -285,14 +286,12 @@
                     return {
                 pane: 'pane_RegionPolygons_2',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(149,18,175,1.0)',
                 dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(231,107,227,1.0)',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
                 interactive: true,
             }
                     break;
@@ -315,14 +314,12 @@
                     return {
                 pane: 'pane_RegionPolygons_2',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(45,177,137,1.0)',
                 dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(34,219,173,1.0)',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
                 interactive: true,
             }
                     break;
@@ -330,14 +327,12 @@
                     return {
                 pane: 'pane_RegionPolygons_2',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(53,121,177,1.0)',
                 dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(53,164,207,1.0)',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
                 interactive: true,
             }
                     break;
@@ -414,7 +409,7 @@
         });
         bounds_group.addLayer(layer_RegionLables_3);
         map.addLayer(layer_RegionLables_3);
-        function pop_Country_4(feature, layer) {
+        function pop_CountryPolygons_4(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -450,36 +445,199 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Country_4_0() {
-            return {
-                pane: 'pane_Country_4',
+        function style_CountryPolygons_4_0(feature) {
+            switch(String(feature.properties['Name'])) {
+                case 'Averton':
+                    return {
+                pane: 'pane_CountryPolygons_4',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(99,174,215,1.0)',
                 dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(196,60,57,1.0)',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
                 interactive: true,
             }
+                    break;
+                case 'Cander':
+                    return {
+                pane: 'pane_CountryPolygons_4',
+                opacity: 1,
+                color: 'rgba(77,75,224,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'Ferner':
+                    return {
+                pane: 'pane_CountryPolygons_4',
+                opacity: 1,
+                color: 'rgba(101,232,193,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'Larienore':
+                    return {
+                pane: 'pane_CountryPolygons_4',
+                opacity: 1,
+                color: 'rgba(222,100,98,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'Ralthair':
+                    return {
+                pane: 'pane_CountryPolygons_4',
+                opacity: 1,
+                color: 'rgba(188,223,122,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'Roggan':
+                    return {
+                pane: 'pane_CountryPolygons_4',
+                opacity: 1,
+                color: 'rgba(210,173,95,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'Tangan':
+                    return {
+                pane: 'pane_CountryPolygons_4',
+                opacity: 1,
+                color: 'rgba(71,216,74,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                case 'Terregonia':
+                    return {
+                pane: 'pane_CountryPolygons_4',
+                opacity: 1,
+                color: 'rgba(170,86,209,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+                default:
+                    return {
+                pane: 'pane_CountryPolygons_4',
+                opacity: 1,
+                color: 'rgba(204,62,154,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 4.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+                    break;
+            }
         }
-        map.createPane('pane_Country_4');
-        map.getPane('pane_Country_4').style.zIndex = 404;
-        map.getPane('pane_Country_4').style['mix-blend-mode'] = 'normal';
-        var layer_Country_4 = new L.geoJson(json_Country_4, {
+        map.createPane('pane_CountryPolygons_4');
+        map.getPane('pane_CountryPolygons_4').style.zIndex = 404;
+        map.getPane('pane_CountryPolygons_4').style['mix-blend-mode'] = 'normal';
+        var layer_CountryPolygons_4 = new L.geoJson(json_CountryPolygons_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Country_4',
-            layerName: 'layer_Country_4',
-            pane: 'pane_Country_4',
-            onEachFeature: pop_Country_4,
-            style: style_Country_4_0,
+            dataVar: 'json_CountryPolygons_4',
+            layerName: 'layer_CountryPolygons_4',
+            pane: 'pane_CountryPolygons_4',
+            onEachFeature: pop_CountryPolygons_4,
+            style: style_CountryPolygons_4_0,
         });
-        bounds_group.addLayer(layer_Country_4);
-        map.addLayer(layer_Country_4);
-        function pop_Cities_5(feature, layer) {
+        bounds_group.addLayer(layer_CountryPolygons_4);
+        map.addLayer(layer_CountryPolygons_4);
+        function pop_CountryLabels_5(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (var i in e.target._eventParents) {
+                        if (typeof e.target._eventParents[i].resetStyle === 'function') {
+                            e.target._eventParents[i].resetStyle(e.target);
+                        }
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Notes'] !== null ? autolinker.link(String(feature.properties['Notes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_CountryLabels_5_0() {
+            return {
+                fill: false,
+                stroke: false,
+                interactive: false
+            }
+        }
+        map.createPane('pane_CountryLabels_5');
+        map.getPane('pane_CountryLabels_5').style.zIndex = 405;
+        map.getPane('pane_CountryLabels_5').style['mix-blend-mode'] = 'normal';
+        var layer_CountryLabels_5 = new L.geoJson(json_CountryLabels_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_CountryLabels_5',
+            layerName: 'layer_CountryLabels_5',
+            pane: 'pane_CountryLabels_5',
+            onEachFeature: pop_CountryLabels_5,
+            style: style_CountryLabels_5_0,
+        });
+        bounds_group.addLayer(layer_CountryLabels_5);
+        map.addLayer(layer_CountryLabels_5);
+        function pop_Cities_6(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -524,9 +682,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Cities_5_0() {
+        function style_Cities_6_0() {
             return {
-                pane: 'pane_Cities_5',
+                pane: 'pane_Cities_6',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -540,27 +698,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Cities_5');
-        map.getPane('pane_Cities_5').style.zIndex = 405;
-        map.getPane('pane_Cities_5').style['mix-blend-mode'] = 'normal';
-        var layer_Cities_5 = new L.geoJson(json_Cities_5, {
+        map.createPane('pane_Cities_6');
+        map.getPane('pane_Cities_6').style.zIndex = 406;
+        map.getPane('pane_Cities_6').style['mix-blend-mode'] = 'normal';
+        var layer_Cities_6 = new L.geoJson(json_Cities_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Cities_5',
-            layerName: 'layer_Cities_5',
-            pane: 'pane_Cities_5',
-            onEachFeature: pop_Cities_5,
+            dataVar: 'json_Cities_6',
+            layerName: 'layer_Cities_6',
+            pane: 'pane_Cities_6',
+            onEachFeature: pop_Cities_6,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Cities_5_0(feature));
+                return L.circleMarker(latlng, style_Cities_6_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Cities_5);
-        map.addLayer(layer_Cities_5);
-        function pop_Points_of_Interest_6(feature, layer) {
+        bounds_group.addLayer(layer_Cities_6);
+        map.addLayer(layer_Cities_6);
+        function pop_Points_of_Interest_7(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -602,9 +760,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Points_of_Interest_6_0() {
+        function style_Points_of_Interest_7_0() {
             return {
-                pane: 'pane_Points_of_Interest_6',
+                pane: 'pane_Points_of_Interest_7',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -618,27 +776,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Points_of_Interest_6');
-        map.getPane('pane_Points_of_Interest_6').style.zIndex = 406;
-        map.getPane('pane_Points_of_Interest_6').style['mix-blend-mode'] = 'normal';
-        var layer_Points_of_Interest_6 = new L.geoJson(json_Points_of_Interest_6, {
+        map.createPane('pane_Points_of_Interest_7');
+        map.getPane('pane_Points_of_Interest_7').style.zIndex = 407;
+        map.getPane('pane_Points_of_Interest_7').style['mix-blend-mode'] = 'normal';
+        var layer_Points_of_Interest_7 = new L.geoJson(json_Points_of_Interest_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Points_of_Interest_6',
-            layerName: 'layer_Points_of_Interest_6',
-            pane: 'pane_Points_of_Interest_6',
-            onEachFeature: pop_Points_of_Interest_6,
+            dataVar: 'json_Points_of_Interest_7',
+            layerName: 'layer_Points_of_Interest_7',
+            pane: 'pane_Points_of_Interest_7',
+            onEachFeature: pop_Points_of_Interest_7,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Points_of_Interest_6_0(feature));
+                return L.circleMarker(latlng, style_Points_of_Interest_7_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Points_of_Interest_6);
-        map.addLayer(layer_Points_of_Interest_6);
-        function pop_Temples_7(feature, layer) {
+        bounds_group.addLayer(layer_Points_of_Interest_7);
+        map.addLayer(layer_Points_of_Interest_7);
+        function pop_Temples_8(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -680,9 +838,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Temples_7_0() {
+        function style_Temples_8_0() {
             return {
-                pane: 'pane_Temples_7',
+                pane: 'pane_Temples_8',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -696,32 +854,34 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Temples_7');
-        map.getPane('pane_Temples_7').style.zIndex = 407;
-        map.getPane('pane_Temples_7').style['mix-blend-mode'] = 'normal';
-        var layer_Temples_7 = new L.geoJson(json_Temples_7, {
+        map.createPane('pane_Temples_8');
+        map.getPane('pane_Temples_8').style.zIndex = 408;
+        map.getPane('pane_Temples_8').style['mix-blend-mode'] = 'normal';
+        var layer_Temples_8 = new L.geoJson(json_Temples_8, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Temples_7',
-            layerName: 'layer_Temples_7',
-            pane: 'pane_Temples_7',
-            onEachFeature: pop_Temples_7,
+            dataVar: 'json_Temples_8',
+            layerName: 'layer_Temples_8',
+            pane: 'pane_Temples_8',
+            onEachFeature: pop_Temples_8,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Temples_7_0(feature));
+                return L.circleMarker(latlng, style_Temples_8_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Temples_7);
-        map.addLayer(layer_Temples_7);
+        bounds_group.addLayer(layer_Temples_8);
+        map.addLayer(layer_Temples_8);
         var overlaysTree = [
-            {label: '<img src="legend/Temples_7.png" /> Temples', layer: layer_Temples_7},
-            {label: '<img src="legend/Points_of_Interest_6.png" /> Points_of_Interest', layer: layer_Points_of_Interest_6},
-            {label: '<img src="legend/Cities_5.png" /> Cities', layer: layer_Cities_5},
-            {label: '<img src="legend/Country_4.png" /> Country', layer: layer_Country_4},
-        {label: '<b>Region</b>', collapsed: true, selectAllCheckbox: true, children: [
+            {label: '<img src="legend/Temples_8.png" /> Temples', layer: layer_Temples_8},
+            {label: '<img src="legend/Points_of_Interest_7.png" /> Points_of_Interest', layer: layer_Points_of_Interest_7},
+            {label: '<img src="legend/Cities_6.png" /> Cities', layer: layer_Cities_6},
+        {label: '<b>Country</b>',  selectAllCheckbox: true, children: [
+            {label: 'Country Labels', layer: layer_CountryLabels_5},
+            {label: 'Country Polygons<br /><table><tr><td style="text-align: center;"><img src="legend/CountryPolygons_4_Averton0.png" /></td><td>Averton</td></tr><tr><td style="text-align: center;"><img src="legend/CountryPolygons_4_Cander1.png" /></td><td>Cander</td></tr><tr><td style="text-align: center;"><img src="legend/CountryPolygons_4_Ferner2.png" /></td><td>Ferner</td></tr><tr><td style="text-align: center;"><img src="legend/CountryPolygons_4_Larienore3.png" /></td><td>Larienore</td></tr><tr><td style="text-align: center;"><img src="legend/CountryPolygons_4_Ralthair4.png" /></td><td>Ralthair</td></tr><tr><td style="text-align: center;"><img src="legend/CountryPolygons_4_Roggan5.png" /></td><td>Roggan</td></tr><tr><td style="text-align: center;"><img src="legend/CountryPolygons_4_Tangan6.png" /></td><td>Tangan</td></tr><tr><td style="text-align: center;"><img src="legend/CountryPolygons_4_Terregonia7.png" /></td><td>Terregonia</td></tr><tr><td style="text-align: center;"><img src="legend/CountryPolygons_4_8.png" /></td><td></td></tr></table>', layer: layer_CountryPolygons_4},]},
+        {label: '<b>Region</b>',  selectAllCheckbox: true, children: [
             {label: 'Region Lables', layer: layer_RegionLables_3},
             {label: 'Region Polygons<br /><table><tr><td style="text-align: center;"><img src="legend/RegionPolygons_2_TheFrozenPeaks0.png" /></td><td>The Frozen Peaks</td></tr><tr><td style="text-align: center;"><img src="legend/RegionPolygons_2_1.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/RegionPolygons_2_GreatBarrenSteppes2.png" /></td><td>Great Barren Steppes</td></tr><tr><td style="text-align: center;"><img src="legend/RegionPolygons_2_MorkhanSwamps3.png" /></td><td>Morkhan Swamps</td></tr></table>', layer: layer_RegionPolygons_2},]},
             {label: '<img src="legend/Alryx150MileHexgrid_1.png" /> Alryx 150 Mile Hex — grid', layer: layer_Alryx150MileHexgrid_1},
@@ -733,11 +893,9 @@
             //openedSymbol: '&#8863; &#x1f5c1;',
             //collapseAll: 'Collapse all',
             //expandAll: 'Expand all',
-			position: 'topleft',
             collapsed: false, 
         });
         lay.addTo(map);
-		lay.setPosition('topleft');
 		document.addEventListener("DOMContentLoaded", function() {
             // set new Layers List height which considers toggle icon
             function newLayersListHeight() {
@@ -803,12 +961,12 @@
               i++;
         });
         var i = 0;
-        layer_Cities_5.eachLayer(function(layer) {
+        layer_CountryLabels_5.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['Name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-weight: bold; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['Name']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Cities_5'});
+            layer.bindTooltip((layer.feature.properties['Name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-weight: bold; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['Name']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_CountryLabels_5'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -816,12 +974,25 @@
               i++;
         });
         var i = 0;
-        layer_Points_of_Interest_6.eachLayer(function(layer) {
+        layer_Cities_6.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['Name'] !== null?String('<div style="color: #ea22ea; font-size: 10pt; font-weight: bold; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['Name']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Points_of_Interest_6'});
+            layer.bindTooltip((layer.feature.properties['Name'] !== null?String('<div style="color: #323232; font-size: 15pt; font-weight: bold; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['Name']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Cities_6'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_Points_of_Interest_7.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Name'] !== null?String('<div style="color: #ea22ea; font-size: 10pt; font-weight: bold; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['Name']).replace(/\\n/g, '<br>') + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Points_of_Interest_7'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -833,15 +1004,15 @@
                 return this._bounds;
             }
         });
-        resetLabels([layer_RegionPolygons_2,layer_RegionLables_3,layer_Cities_5,layer_Points_of_Interest_6]);
+        resetLabels([layer_RegionPolygons_2,layer_RegionLables_3,layer_CountryLabels_5,layer_Cities_6,layer_Points_of_Interest_7]);
         map.on("zoomend", function(){
-            resetLabels([layer_RegionPolygons_2,layer_RegionLables_3,layer_Cities_5,layer_Points_of_Interest_6]);
+            resetLabels([layer_RegionPolygons_2,layer_RegionLables_3,layer_CountryLabels_5,layer_Cities_6,layer_Points_of_Interest_7]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_RegionPolygons_2,layer_RegionLables_3,layer_Cities_5,layer_Points_of_Interest_6]);
+            resetLabels([layer_RegionPolygons_2,layer_RegionLables_3,layer_CountryLabels_5,layer_Cities_6,layer_Points_of_Interest_7]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_RegionPolygons_2,layer_RegionLables_3,layer_Cities_5,layer_Points_of_Interest_6]);
+            resetLabels([layer_RegionPolygons_2,layer_RegionLables_3,layer_CountryLabels_5,layer_Cities_6,layer_Points_of_Interest_7]);
         });
         </script>
     </body>
